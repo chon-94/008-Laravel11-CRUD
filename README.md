@@ -41,3 +41,6 @@ Consola (tailwind)
      php artisan migrate
 
 
+     php artisan make:model Producto -mcr     
+
+

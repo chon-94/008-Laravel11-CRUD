@@ -36,21 +36,20 @@
 <div class="fixed top-4 right-4 z-50 flex gap-2">
   <!-- Botón para ir a la página welcome -->
   <a href="/" 
-     class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition">
+     class="px-2 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition">
     Welcome
   </a>
 
   <!-- Botón para alternar modo claro/oscuro -->
   <button id="darkModeToggle" 
-          class="px-4 py-2 rounded-md bg-gray-800 text-white dark:bg-gray-200 dark:text-gray-800 transition flex items-center gap-2">
+          class="px-2 py-2 rounded-md bg-gray-800 text-white dark:bg-gray-200 dark:text-gray-800 transition flex items-center gap-2">
     <i class="fa-solid fa-circle-half-stroke"></i>
     Claro/Oscuro
   </button>
 </div>
+
     <!-- Contenido principal centrado -->
-    <div class="relative flex flex-col items-center justify-center min-h-screen mt-8 selection:bg-[#FF2D20] selection:text-white">
       @yield('contenido')
-    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

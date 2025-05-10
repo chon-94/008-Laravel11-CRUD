@@ -20,12 +20,18 @@
       </style>
   @endif
 </head>
+
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
+  
   <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50 min-h-screen">
 
     <!-- Imagen de fondo -->
-    <img id="background" class="fixed -left-20 top-0 max-w-[877px] opacity-50" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
-
+    <img
+    id="background"
+    class="fixed -left-20 top-0 max-w-[877px] opacity-50 z-0 pointer-events-none"
+    src="https://laravel.com/assets/img/welcome/background.svg"
+    alt="Laravel background" />
+  
  <!-- Contenedor fijo para los dos botones -->
 <div class="fixed top-4 right-4 z-50 flex gap-2">
   <!-- Botón para ir a la página welcome -->

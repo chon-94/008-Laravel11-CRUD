@@ -9,15 +9,19 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
+
             $table->string('nombre');
             $table->enum('origen', ['fabricacion', 'compra'])->default('compra');
-            $table->string('unidad_medida');
-            $table->decimal('stock_actual', 10, 2)->default(0);
-            $table->decimal('stock_minimo', 10, 2)->default(5);
-            $table->decimal('precio_compra', 10, 2)->nullable();
-            $table->decimal('precio_venta', 10, 2);
+            
+            $table->enum('unidad', ['kg', 'g', 'litros', 'unidades'])->default('unidades');       
+            $table->decimal('stock', 10, 2)->default(5);
+            $table->decimal('compra', 10, 2)->nullable(0);
+            $table->decimal('venta', 10, 2)->nullable(0);
+            
             $table->boolean('es_perecedero')->default(false);
             $table->date('fecha_caducidad')->nullable();
+            $table->index(['es_perecedero', 'fecha_caducidad']);
+        
             $table->text('descripcion')->nullable();
             $table->timestamps();
         });

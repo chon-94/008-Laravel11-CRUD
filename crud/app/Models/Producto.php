@@ -12,22 +12,20 @@ class Producto extends Model
     protected $fillable = [
         'nombre',
         'origen',
-        'unidad_medida',
-        'stock_actual',
-        'stock_minimo',
-        'precio_compra',
-        'precio_venta',
+        'unidad',
+        'stock',
+        'compra',
+        'venta',
         'es_perecedero',
         'fecha_caducidad',
-        'descripcion'
+        'descripcion',
     ];
 
     protected $casts = [
+        'stock' => 'decimal:2',
+        'compra' => 'decimal:2',
+        'venta' => 'decimal:2',
         'es_perecedero' => 'boolean',
         'fecha_caducidad' => 'date',
-        'stock_actual' => 'decimal:2',
-        'stock_minimo' => 'decimal:2',
-        'precio_compra' => 'decimal:2',
-        'precio_venta' => 'decimal:2'
     ];
 }

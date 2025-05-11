@@ -35,7 +35,7 @@ class ProductoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Producto $producto)
+    public function show(Producto $id)
     {
         //
     }
@@ -43,7 +43,7 @@ class ProductoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Producto $producto)
+    public function edit(Producto $id)
     {
         //
     }
@@ -51,7 +51,7 @@ class ProductoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Producto $producto)
+    public function update(Request $request, Producto $id)
     {
         //
     }
@@ -59,7 +59,7 @@ class ProductoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Producto $producto)
+    public function destroy(Producto $id)
     {
         //
     }

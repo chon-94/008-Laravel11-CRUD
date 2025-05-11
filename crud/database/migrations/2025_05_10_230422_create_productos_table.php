@@ -11,7 +11,7 @@ return new class extends Migration
             $table->id();
 
             $table->string('nombre');
-            $table->enum('origen', ['fabricacion', 'compra'])->default('compra');
+            $table->enum('origen', ['Fabricado', 'Adquirido'])->default('Fabricado');
             
             $table->enum('unidad', ['kg', 'g', 'litros', 'unidades'])->default('unidades');       
             $table->decimal('stock', 10, 2)->default(5);

@@ -76,9 +76,15 @@ class ProductoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Producto $id)
+    public function edit($id)
     {
-        //
+        // Asegúrate de usar findOrFail para obtener un solo modelo
+        $producto = Producto::findOrFail($id);
+        
+        $origenes = ['Fabricado' => 'Fabricado', 'Adquirido' => 'Adquirido'];
+        $unidades = ['kg' => 'kg', 'g' => 'g', 'l' => 'l', 'ml' => 'ml', 'litros' => 'litros', 'unidad' => 'unidad'];
+        
+        return view('productos.edit', compact('producto', 'origenes', 'unidades'));
     }
 
     /**

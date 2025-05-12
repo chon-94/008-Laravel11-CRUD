@@ -44,7 +44,7 @@ class ProductoController extends Controller
         $validated = $request->validate([
             'nombre' => 'required|string|max:255',
             'origen' => 'required|string|in:Fabricado,Adquirido',
-            'unidad' => 'required|string|in:kg,g,l,ml,unidad',
+            'unidad' => 'required|string|in:kg,g,litros,ml,unidad',
             'stock' => 'required|numeric|min:0',
             'compra' => 'required|numeric|min:0',
             'venta' => 'required|numeric|min:0',

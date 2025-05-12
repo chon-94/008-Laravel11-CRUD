@@ -53,10 +53,10 @@
                             <select id="unidad" name="unidad" required
                                     class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white">
                                 <option value="">Seleccione...</option>
-                                <option value="kg">Kilogramos</option>
-                                <option value="g">Gramos</option>
-                                <option value="l">Litros</option>
-                                <option value="ml">Mililitros</option>
+                                <option value="kilogramos">Kilogramos</option>
+                                <option value="gramos">Gramos</option>
+                                <option value="litros">Litros</option>
+                                <option value="mililitros">Mililitros</option>
                                 <option value="unidad">Unidad</option>
                             </select>
                         </div>

@@ -11,11 +11,18 @@
             
             <!-- Contenedor de imagen -->
             <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
-                <!-- Imagen solo visible en modo oscuro -->
-                <img src="https://laravel.com/assets/img/welcome/docs-dark.svg " alt="Laravel documentation screenshot" 
-                    class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"/>
-            </div>
+                <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
 
+                            <!-- Imagen solo visible en modo oscuro -->
+                    {{--<img src="https://laravel.com/assets/img/welcome/docs-dark.svg " alt="Laravel documentation screenshot" class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"/>--}}
+                        <img src="https://laravel.com/assets/img/welcome/docs-light.svg" alt="Laravel documentation screenshot" class="aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
+                            onerror="   document.getElementById('screenshot-container').classList.add('!hidden');
+                                        document.getElementById('docs-card').classList.add('!row-span-1');
+                                        document.getElementById('docs-card-content').classList.add('!flex-row');
+                                        document.getElementById('background').classList.add('!hidden');"/>
+                        <img src="https://laravel.com/assets/img/welcome/docs-dark.svg" alt="Laravel documentation screenshot" class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"/>
+                </div>
+            </div>
         </a>
 
         <!-- Tarjeta para acceder a la lista de productos -->
@@ -24,6 +31,7 @@
             
             <!-- Icono redondo del producto -->
             <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
+                
                 <!-- SVG del icono -->
                 <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <g fill="#FF2D20">
@@ -49,6 +57,7 @@
             
             <!-- Icono redondo -->
             <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
+
                 <!-- SVG del icono -->
                 <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <g fill="#FF2D20">
@@ -69,6 +78,6 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/>
             </svg>
         </a>
-
+        
     </div>
 </main>

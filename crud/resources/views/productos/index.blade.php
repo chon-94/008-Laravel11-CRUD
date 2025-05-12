@@ -101,7 +101,7 @@
 
                 <!-- Paginación (comentada por ahora) -->
                 <div class="p-4 border-t border-gray-200 dark:border-gray-700">
-                    {{-- {{ $productos->links() }} --}}
+                    {{ $productos->links() }}
                 </div>
             </div>
 

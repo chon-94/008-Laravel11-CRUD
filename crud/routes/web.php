@@ -12,3 +12,7 @@ Route::get('productos/create', [ProductoController::class, 'create'])->name('pro
 Route::post('productos', [ProductoController::class, 'store'])->name('productos.store');
 
 Route::get('/productos/{id}', [ProductoController::class, 'show'])->name('productos.show');
+
+Route::get('/productos/{id}/edit', [ProductoController::class, 'edit'])->name('productos.edit');
+
+

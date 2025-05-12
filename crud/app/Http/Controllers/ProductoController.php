@@ -90,9 +90,25 @@ class ProductoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Producto $id)
+    public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'nombre' => 'required|string|max:255',
+            'origen' => 'required|in:Fabricado,Adquirido',
+            'unidad' => 'required|in:kg,g,l,ml,litros,unidad',
+            'stock' => 'required|numeric|min:0',
+            'compra' => 'nullable|numeric|min:0',
+            'venta' => 'nullable|numeric|min:0',
+            'es_perecedero' => 'boolean',
+            'fecha_caducidad' => 'nullable|date|required_if:es_perecedero,true',
+            'descripcion' => 'nullable|string'
+        ]);
+    
+        $producto = Producto::findOrFail($id);
+        $producto->update($validated);
+    
+        return redirect()->route('productos.index')
+                        ->with('success', 'Producto actualizado correctamente');
     }
 
     /**

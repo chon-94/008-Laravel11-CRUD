@@ -11,7 +11,7 @@
             </div>
     
             <div class="p-6">
-            <form action="#" method="Post">
+            <form action="{{route('productos.update', $producto->id)}}" method="Post">
                 @csrf
                 @method('PUT')
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

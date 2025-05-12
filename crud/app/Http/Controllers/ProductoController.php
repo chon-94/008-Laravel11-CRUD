@@ -18,7 +18,7 @@ class ProductoController extends Controller
     public function index()
     {
         // Obtiene todos los registros de la tabla 'productos'
-        $productos = Producto::all();
+        $productos = Producto::paginate(2);
 
         // Retorna la vista 'productos.index' pasando los datos como variable
         return view('productos.index', compact('productos'));

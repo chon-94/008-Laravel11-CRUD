@@ -13,7 +13,7 @@
                     <div class="p-6">
                         <form action="{{ route('productos.store') }}" method="POST">
                             @csrf
-                            
+                            @method('POST')
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <!-- Campo Nombre -->
                                 <div>

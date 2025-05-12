@@ -48,6 +48,9 @@
                                         <a href="{{ route('productos.show', $producto->id) }}" class="text-green-600 hover:text-green-800 dark:text-green-400 dark:hover:text-green-300">
                                             Ver Detalle
                                         </a>
+                                        <a href="{{ route('productos.edit', $producto->id) }}" class="text-yellow-600 hover:text-yellow-800 dark:text-yellow-400 dark:hover:text-yellow-300">
+                                            Editar
+                                        </a>
                                         <form action="#" method="POST" class="inline-block" onsubmit="return confirm('¿Estás seguro de eliminar este producto?')">
                                             @csrf
                                             @method('DELETE')

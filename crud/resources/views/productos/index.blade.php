@@ -45,7 +45,7 @@
                                     <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">{{ $producto->fecha_caducidad }}</td>
                                     <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">{{ $producto->descripcion }}</td>
                                     <td class="px-4 py-3 text-sm text-right space-x-2">
-                                        <a href="#" class="text-green-600 hover:text-green-800 dark:text-green-400 dark:hover:text-green-300">
+                                        <a href="{{ route('productos.show', $producto->id) }}" class="text-green-600 hover:text-green-800 dark:text-green-400 dark:hover:text-green-300">
                                             Ver Detalle
                                         </a>
                                         <form action="#" method="POST" class="inline-block" onsubmit="return confirm('¿Estás seguro de eliminar este producto?')">

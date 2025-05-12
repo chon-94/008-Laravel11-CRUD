@@ -96,21 +96,31 @@
                 </div>
     
                 <!-- Botones -->
-                <div class="mt-8 flex justify-end space-x-4">
-                <a href="{{ route('productos.index') }}" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    Cancelar
-                </a>
-                <button type="submit" class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-secondary-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    ACTUALIZAR
-                </button>
-                <div class="mt-6 flex justify-end">
-                    <form action="{{ route('productos.destroy', $producto->id) }}" method="POST" 
-                          onsubmit="return confirm('¿Estás seguro de eliminar este producto permanentemente?')">
-                        @csrf
-                        @method('DELETE')
-                        
+                <!-- Botones -->
+<div class="flex flex-wrap justify-end gap-3 mt-6">
+    <!-- Botón VOLVER -->
+    <a href="{{ route('productos.index') }}" 
+       class="flex items-center justify-center w-32 h-10 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+        </svg>
+        Volver
+    </a>
 
-                    </form>
+    <!-- Botón ACTUALIZAR -->
+    <button type="submit"
+            class="flex items-center justify-center w-32 h-10 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+        </svg>
+        Actualizar
+    </button>
+</div>
+
+
+
+
+
                 </div>
                 </div>
             </form>

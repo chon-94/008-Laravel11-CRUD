@@ -24,7 +24,7 @@
                                 <th class="px-4 py-3 text-left text-sm font-medium text-gray-500 dark:text-gray-400">Unidad</th>
                                 <th class="px-4 py-3 text-left text-sm font-medium text-gray-500 dark:text-gray-400">Stock</th>
                                 {{-- <th class="px-4 py-3 text-left text-sm font-medium text-gray-500 dark:text-gray-400">Compra</th> --}}
-                                {{-- <th class="px-4 py-3 text-left text-sm font-medium text-gray-500 dark:text-gray-400">Venta</th> --}}
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-500 dark:text-gray-400">Venta</th>
                                 {{-- <th class="px-4 py-3 text-left text-sm font-medium text-gray-500 dark:text-gray-400">Perecedero</th> --}}
                                 <th class="px-4 py-3 text-left text-sm font-medium text-gray-500 dark:text-gray-400">Caducidad</th>
                                 <th class="px-4 py-3 text-left text-sm font-medium text-gray-500 dark:text-gray-400">Descripción</th>
@@ -40,7 +40,7 @@
                                     <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">{{ $producto->unidad }}</td>
                                     <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">{{ $producto->stock }}</td>
                                     {{-- <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">${{ number_format($producto->compra ?? 0, 2) }}</td> --}}
-                                    {{-- <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">${{ number_format($producto->venta ?? 0, 2) }}</td> --}}
+                                    <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">${{ number_format($producto->venta ?? 0, 2) }}</td>
                                     {{-- <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">{{ $producto->es_perecedero ? 'Sí' : 'No' }}</td> --}}
                                     <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">{{ $producto->fecha_caducidad }}</td>
                                     <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">{{ $producto->descripcion }}</td>

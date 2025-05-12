@@ -1,7 +1,6 @@
 @extends('layouts/main')
 
-<main class="mt-20 mb-1">
-    <div class="grid gap-4 lg:grid-cols-2 lg:gap-x-6 lg:gap-y-8">
+
         <main class="mt-20 mb-1">
             <div class="container mx-auto px-4">
                 <h1 class="text-2xl font-bold mb-6">Nuevo Producto</h1>
@@ -117,6 +116,6 @@
                 fechaContainer.style.display = this.checked ? 'block' : 'none';
             });
         </script>
-    </div>
-</main>
+
+ 
 

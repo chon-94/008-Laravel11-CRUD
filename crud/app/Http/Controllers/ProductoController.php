@@ -38,7 +38,7 @@ class ProductoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(  ProductoRequest $request)
     {
         // Validamos los campos del formulario con reglas claras
         $validated = $request->validate([

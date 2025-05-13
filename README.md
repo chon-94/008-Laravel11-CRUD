@@ -1,5 +1,5 @@
 # 008-Laravel11-CRUD
- laravel-breeze-tailwind
+ laravel 11 tailwind
 
  composer create-project --prefer-dist laravel/laravel crud "11.*"
 
@@ -151,17 +151,17 @@ ahora podremos entrar en los modelos
 
 a usaremos esto como campos del crud 
 
-            $table->string('nombre');
-            $table->enum('origen', ['fabricacion', 'compra'])->default('compra');
-            $table->string('unidad_medida');
-            $table->decimal('stock_actual', 10, 2)->default(0);
-            $table->decimal('stock_minimo', 10, 2)->default(5);
-            $table->decimal('precio_compra', 10, 2)->nullable();
-            $table->decimal('precio_venta', 10, 2);
-            $table->boolean('es_perecedero')->default(false);
-            $table->date('fecha_caducidad')->nullable();
-            $table->text('descripcion')->nullable();
-            $table->timestamps();
+     $table->string('nombre');
+     $table->enum('origen', ['fabricacion', 'compra'])->default('compra');
+     $table->string('unidad_medida');
+     $table->decimal('stock_actual', 10, 2)->default(0);
+     $table->decimal('stock_minimo', 10, 2)->default(5);
+     $table->decimal('precio_compra', 10, 2)->nullable();
+     $table->decimal('precio_venta', 10, 2);
+     $table->boolean('es_perecedero')->default(false);
+     $table->date('fecha_caducidad')->nullable();
+     $table->text('descripcion')->nullable();
+     $table->timestamps();
 
 en base a eso vamos a trabajar ahora si dale 
 
